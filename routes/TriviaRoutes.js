@@ -1,8 +1,17 @@
-const { Pool } = require('pg');
-require('dotenv').config();
 
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-});
+const express = require('express');
+const router = express.Router();
 
-module.exports = pool;
+const triviaController = require('../controllers/TriviaController');
+
+router.get('/topics', triviaController.getTopics);
+
+router.get('/topic/:topic', triviaController.getQuestionsByTopic);
+
+router.get('/random', triviaController.getRandomQuestion);
+
+router.post('/answer', triviaController.checkAnswer);
+
+router.post('/question/add', triviaController.addQuestion);
+
+module.exports = router;
