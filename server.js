@@ -1,4 +1,4 @@
-
+// this file contains the entry points for the server, sets up the express server, and defines the routes for the API
 const express = require('express');
 require('dotenv').config();
 

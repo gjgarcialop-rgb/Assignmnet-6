@@ -1,4 +1,3 @@
-
 const triviaModel = require('../models/TriviaModel');
 
 // Get all topics

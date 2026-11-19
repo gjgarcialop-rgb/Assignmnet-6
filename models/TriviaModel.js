@@ -1,4 +1,3 @@
-
 const pool = require('../config/database');
 
 // Get all topics
